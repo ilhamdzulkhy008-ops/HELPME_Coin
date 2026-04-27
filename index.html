@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpCoin ($HELP) | A Visionary Student's Journey</title>
+    <style>
+        :root {
+            --cyan: #00ffcc;
+            --purple: #a259ff;
+            --bg-dark: #090b10;
+            --card-bg: rgba(255, 255, 255, 0.05);
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Gradasi Background Animasi */
+        .bg-glow {
+            position: fixed;
+            top: -20%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(162,89,255,0.15) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+        
+        .bg-glow-2 {
+            position: fixed;
+            bottom: -20%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,204,0.1) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .logo-img {
+            width: 220px;
+            height: 220px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: linear-gradient(90deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a0aec0;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Tombol Utama */
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #090b10;
+            background: linear-gradient(90deg, var(--cyan), #00e6b8);
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 30px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(0, 255, 204, 0.4);
+        }
+
+        /* Kartu Konten */
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: var(--cyan);
+            font-size: 1.8rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: #cbd5e0;
+            font-size: 1.1rem;
+        }
+
+        /* Tokenomics Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            border: 1px solid rgba(162, 89, 255, 0.2);
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--purple);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #a0aec0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer & Socials */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .social-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+        }
+
+        .social-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #4a5568;
+            font-size: 0.9rem;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .card { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="container">
+        
+        <header>
+            <img src="https://via.placeholder.com/220" alt="$HELP Logo" class="logo-img">
+            <h1>HelpCoin ($HELP)</h1>
+            <p class="subtitle">Empowering Education. Building the Future. 🕊️💻</p>
+            
+            <a href="#PUMPFUN" class="btn" target="_blank">Buy on Pump.fun</a>
+        </header>
+
+        <section class="card">
+            <h2>The Developer's Story</h2>
+            <p>Hello, I'm Zulhi. I am a determined student who recently got accepted into Telkom University to pursue a degree in <strong>S1 Sistem informasi terapan kota cerdas</strong>.</p>
+            <p>I have been passionate about technology and coding since I was a kid. I am an achiever who loves building things, especially in AI. However, to survive and excel in my university studies, I urgently need a capable laptop. Right now, I am building this project using my hardworking mother's work laptop, and its time is running out.</p>
+            <p>HelpCoin ($HELP) is not just a meme. It is my very first real-world IT portfolio. It represents my skills, my ambition, and my transparency as a builder.</p>
+        </section>
+
+        <section class="card">
+            <h2>Tokenomics & The "No Dump" Promise</h2>
+            <p>Investors fear rugs. I offer complete transparency. My goal is to fund my education, not to destroy a chart. Here is my strategy:</p>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-value">1 Billion</div>
+                    <div class="stat-label">Total Supply</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">7%</div>
+                    <div class="stat-label">Dev Wallet</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">DCA Out</div>
+                    <div class="stat-label">Sell Strategy</div>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>How I secure my laptop:</strong> I only hold 7% of the supply. I will strictly use the DCA (Dollar Cost Averaging) strategy to take small, gradual profits <em>only</em> when major market cap milestones are hit. I will never dump my bags. The community's trust is worth more than a quick buck.</p>
+        </section>
+
+        <section class="card">
+            <h2>The Vision (Roadmap)</h2>
+            <p>This doesn't end when I get my laptop. That is just Phase 1.</p>
+            <ul>
+                <li><strong>Phase 1:</strong> Launch on Pump.fun, build a strong community, hit the Raydium bonding curve, and secure the educational laptop.</li>
+                <li><strong>Phase 2:</strong> Continue developing the $HELP ecosystem. I will use my new laptop to create high-quality AI content, smart contracts, and utilities for the community.</li>
+                <li><strong>Phase 3: Giving Back.</strong> Once this project becomes highly successful, a portion of the project's revenue will be dedicated to charity—specifically to help other underprivileged students get the technology they need to succeed in school.</li>
+            </ul>
+        </section>
+
+        <div class="social-links">
+            <a href="https://twitter.com/HelpCoinOfficial" class="social-btn" target="_blank">🐦 Twitter (X)</a>
+            <a href="https://t.me/HelpCoinOfficial" class="social-btn" target="_blank">✈️ Telegram</a>
+        </div>
+
+        <footer>
+            <p>© 2026 HelpCoin ($HELP). Created by Zulhi. Built for education, driven by community.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
