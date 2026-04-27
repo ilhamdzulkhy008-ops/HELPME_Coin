@@ -3,44 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpMe Project ($HELPME) | A Visionary Student's Journey</title>
+    <title>HelpMe Project ($HELPME) | Tech for Humanity</title>
     <style>
         :root {
             --cyan: #00ffcc;
             --purple: #a259ff;
-            --bg-dark: #090b10;
-            --card-bg: rgba(255, 255, 255, 0.05);
+            --bg-dark: #06080c;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --neon-glow: 0 0 15px rgba(0, 255, 204, 0.4);
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: var(--bg-dark);
             color: #ffffff;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
-        /* Gradasi Background Animasi */
+        /* Background Effects */
         .bg-glow {
             position: fixed;
-            top: -20%;
+            top: -10%;
             left: -10%;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(162,89,255,0.15) 0%, rgba(0,0,0,0) 70%);
+            width: 50%;
+            height: 50%;
+            background: radial-gradient(circle, rgba(162,89,255,0.1) 0%, rgba(0,0,0,0) 70%);
             z-index: -1;
+            filter: blur(80px);
         }
         
         .bg-glow-2 {
             position: fixed;
-            bottom: -20%;
+            bottom: -10%;
             right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0,255,204,0.1) 0%, rgba(0,0,0,0) 70%);
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(0,255,204,0.08) 0%, rgba(0,0,0,0) 70%);
             z-index: -1;
+            filter: blur(80px);
         }
 
         .container {
@@ -51,17 +54,21 @@
 
         header {
             text-align: center;
-            padding: 50px 0;
+            padding: 60px 0;
         }
 
         .logo-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 20px;
-            box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.1);
-            object-fit: cover;
-            margin-bottom: 20px;
+            width: 200px;
+            height: 200px;
+            border-radius: 30px;
+            box-shadow: var(--neon-glow);
+            border: 1px solid rgba(0, 255, 204, 0.3);
+            margin-bottom: 30px;
+            transition: transform 0.5s ease;
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05) rotate(2deg);
         }
 
         h1 {
@@ -70,125 +77,122 @@
             background: linear-gradient(90deg, var(--cyan), var(--purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
+            font-weight: 800;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: #a0aec0;
-            margin-top: 10px;
-            font-weight: 300;
-        }
-
-        /* Tombol Utama */
-        .btn {
-            display: inline-block;
-            padding: 16px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #090b10;
-            background: linear-gradient(90deg, var(--cyan), #00e6b8);
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0, 255, 204, 0.2);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(0, 255, 204, 0.4);
-        }
-
-        /* Kartu Konten */
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 30px;
-            text-align: left;
-        }
-
-        .card h2 {
-            margin-top: 0;
+        /* Typewriter Effect */
+        .typewriter {
+            font-size: 1.3rem;
             color: var(--cyan);
-            font-size: 1.8rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 15px;
-            margin-bottom: 20px;
-        }
-
-        .card p {
-            color: #cbd5e0;
-            font-size: 1.1rem;
-        }
-
-        /* Tokenomics Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .stat-box {
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            border-radius: 16px;
-            text-align: center;
-            border: 1px solid rgba(162, 89, 255, 0.2);
-        }
-
-        .stat-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--purple);
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            color: #a0aec0;
-            font-size: 0.9rem;
-            text-transform: uppercase;
+            height: 1.5em;
+            margin-top: 10px;
+            font-weight: 400;
             letter-spacing: 1px;
         }
 
-        /* Footer & Socials */
+        .btn {
+            display: inline-block;
+            padding: 18px 45px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000;
+            background: var(--cyan);
+            border-radius: 12px;
+            text-decoration: none;
+            margin-top: 40px;
+            transition: 0.3s;
+            box-shadow: var(--neon-glow);
+            text-transform: uppercase;
+        }
+
+        .btn:hover {
+            background: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+        }
+
+        h2 {
+            color: var(--cyan);
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--purple);
+        }
+
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 15px;
+            margin-top: 40px;
         }
 
         .social-btn {
-            padding: 12px 30px;
-            border-radius: 50px;
+            padding: 12px 25px;
+            border-radius: 10px;
             text-decoration: none;
-            font-weight: bold;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
             transition: 0.3s;
         }
 
         .social-btn:hover {
             background: rgba(255, 255, 255, 0.1);
+            border-color: var(--cyan);
         }
 
         footer {
             text-align: center;
-            padding: 40px 0;
-            color: #4a5568;
-            font-size: 0.9rem;
+            padding: 60px 0;
+            color: #555;
+            font-size: 0.85rem;
         }
 
-        /* Responsiveness */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .card { padding: 25px; }
-        }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 15px; display: flex; align-items: flex-start; }
+        li::before { content: "▹"; color: var(--cyan); margin-right: 10px; }
+
     </style>
 </head>
 <body>
@@ -200,68 +204,74 @@
         
         <header>
             <img src="https://github.com/ilhamdzulkhy008-ops/HELPME_Coin/blob/main/Gemini_Generated_Image_too4getoo4getoo4.png?raw=true" alt="$HELPME Logo" class="logo-img">
-            <h1>HelpMe Project ($HELPME)</h1>
-            <p class="subtitle">Empowering Education. Sharing the Success. 🕊️💻</p>
-            
-            <a href="#PUMPFUN" class="btn" target="_blank">Buy on Pump.fun</a>
+            <h1>HelpMe Project</h1>
+            <div class="typewriter" id="typewriter"></div>
+            <a href="#PUMPFUN" class="btn">Get $HELPME Now</a>
         </header>
 
         <section class="card">
-            <h2>The Developer's Story</h2>
-            <p>Hello, my name is Dzulkhy. I am a determined 17-year-old student from Malang, Indonesia, who recently got accepted into Telkom University to pursue a degree in <strong>S1 Sistem informasi terapan kota cerdas</strong>.</p>
-            <p>While I spend my days helping my father run his motorcycle shop, my true passion has always been technology. I have been deeply engaged in learning English, practicing martial arts for discipline, and creating AI-generated 3D content to build my skills. However, to survive and excel in my university studies, I urgently need a capable laptop. Right now, I am building the HelpMe Project using my hardworking mother's work laptop, and its time is running out.</p>
-            <p>HelpMeCoin ($HELPME) is not just a meme. It is my very first real-world IT portfolio. It represents my ambition, my discipline, and my transparency as a builder.</p>
+            <h2>The Vision</h2>
+            <p>Welcome to the <strong>HelpMe Project ($HELPME)</strong>. This initiative was born from a simple yet powerful necessity: the bridge between ambition and the tools required to achieve it. As a student entering the field of <strong>S1 Sistem informasi terapan kota cerdas</strong>, technology is my language, but I currently lack the fundamental tool to speak it—a capable laptop.</p>
+            <p>I have dedicated years to mastering English, discipline, and AI content creation. This project was developed on borrowed time and a borrowed work laptop. $HELPME is my first decentralized portfolio, proving that creativity can thrive even with limited resources.</p>
         </section>
 
         <section class="card">
-            <h2>A Noble Mission & Radical Transparency</h2>
-            <p>This project is much bigger than just one student needing a laptop. The <strong>HelpMe Project</strong> is built on the core principle of giving back to society. I believe that technology should be a tool to uplift others.</p>
-            <p>A significant portion of the profits generated from this ecosystem will be dedicated to charity—specifically aimed at helping underprivileged individuals and students who lack the financial resources to achieve their dreams. We will share our success.</p>
-            <p><strong>Absolute Transparency:</strong> Every charitable act will be strictly documented. Proof of donations, activities, and community impact will be transparently recorded with photos and videos, and posted directly on our official X (Twitter) and Telegram channels. When you invest in $HELPME, you are funding a transparent, real-world initiative that changes lives.</p>
+            <h2>The "Share & Care" Protocol</h2>
+            <p>This project isn't just about one individual; it’s a social experiment in community-driven support. I believe that when one person rises, they should pull others up with them. The profits from this ecosystem are pledged to a noble cause.</p>
+            <p><strong>Transparency Above All:</strong> Every step of our journey—from securing my educational tools to the subsequent charitable donations—will be documented with surgical precision. We don't just "say" we help; we provide the evidence. Photos, videos, and legal receipts of our community impact will be shared directly on X and Telegram. When you invest in $HELPME, you are investing in a verified cycle of good.</p>
         </section>
 
         <section class="card">
-            <h2>Tokenomics & The "No Dump" Promise</h2>
-            <p>Investors fear rugs. I offer complete transparency. My goal is to fund my education and support those in need, not to destroy a chart. Here is my strategy:</p>
-            
+            <h2>Tokenomics</h2>
             <div class="grid">
                 <div class="stat-box">
-                    <div class="stat-value">1 Billion</div>
-                    <div class="stat-label">Total Supply</div>
+                    <div class="stat-label">SUPPLY</div>
+                    <div class="stat-value">1,000,000,000</div>
                 </div>
                 <div class="stat-box">
+                    <div class="stat-label">DEV WALLET</div>
                     <div class="stat-value">7%</div>
-                    <div class="stat-label">Dev Wallet</div>
                 </div>
                 <div class="stat-box">
-                    <div class="stat-value">DCA Out</div>
-                    <div class="stat-label">Sell Strategy</div>
+                    <div class="stat-label">SELL TAX</div>
+                    <div class="stat-value">0%</div>
                 </div>
             </div>
-
-            <p style="margin-top: 20px;"><strong>How the project is funded:</strong> I only hold 7% of the supply. I will strictly use the DCA (Dollar Cost Averaging) strategy to take small, gradual profits <em>only</em> when major market cap milestones are hit. I will never dump my bags. The community's trust is worth more than a quick buck.</p>
+            <p><strong>Anti-Dump Mechanism:</strong> To protect the chart and our long-term supporters, I am committed to a gradual DCA (Dollar Cost Averaging) profit-taking strategy. This ensures that the growth remains stable as we reach milestones for my education and the charity fund.</p>
         </section>
 
         <section class="card">
-            <h2>The Vision (Roadmap)</h2>
-            <p>This doesn't end when I secure my study equipment. That is just Phase 1.</p>
+            <h2>Phase Roadmap</h2>
             <ul>
-                <li><strong>Phase 1:</strong> Launch on Pump.fun, build a strong community, hit the Raydium bonding curve, and secure the educational laptop for my university studies.</li>
-                <li><strong>Phase 2:</strong> Continue developing the $HELPME ecosystem. I will use my new laptop to create high-quality 3D AI content, develop smart contracts, and expand the utility of this project.</li>
-                <li><strong>Phase 3: The Giveback Initiative.</strong> Actively distributing a portion of the project's revenue to charity. All evidence of funds helping underprivileged people will be posted transparently on our social platforms.</li>
+                <li><strong>Phase 1: Genesis</strong> - Launch on Pump.fun, build the core community, and secure the primary educational laptop for my University studies.</li>
+                <li><strong>Phase 2: Build</strong> - Leveraging new hardware to scale AI content, smart contract development, and technical utility for $HELPME holders.</li>
+                <li><strong>Phase 3: Impact</strong> - The launch of our "Giveback Initiative." Systematic distribution of funds to underprivileged students. Full transparency via X and Telegram documentation.</li>
             </ul>
         </section>
 
         <div class="social-links">
-            <a href="https://x.com/Dev_ofHELPME" class="social-btn" target="_blank">🐦 Twitter (X)</a>
-            <a href="https://t.me/HELP_COMMUNIT" class="social-btn" target="_blank">✈️ Telegram</a>
+            <a href="https://x.com/Dev_ofHELPME" class="social-btn">X / Twitter</a>
+            <a href="https://t.me/HELP_COMMUNIT" class="social-btn">Telegram</a>
         </div>
 
         <footer>
-            <p>© 2026 HelpMe Project ($HELPME). Created by Dzulkhy. Built for education, driven by community, dedicated to charity.</p>
+            <p>© 2026 HelpMe Project. Created by Dzulkhy. Transparency is our code.</p>
         </footer>
 
     </div>
+
+    <script>
+        const text = "Empowering Education. Sharing Success.";
+        let i = 0;
+        function type() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, 100);
+            }
+        }
+        type();
+    </script>
 
 </body>
 </html>
